@@ -1,9 +1,9 @@
-# Project Name
+# Virtual Carol
 
 ## Project desc
 
-## participant info
+## B.Tech EEE Student at NSS College of Engineering, Palakkad
 
-[Your name](github-profile-urls)
+[Kaladharan Lal](github-profile-urls)
 
 > to get started click [here](GETTING_STARTED.md)
