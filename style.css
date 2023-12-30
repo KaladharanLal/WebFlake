@@ -10,6 +10,10 @@
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Chrome, Opera and Firefox */
 }
+/* :root
+{
+    --branchNo: 0;
+} */
 body
 {
     display: flex;
@@ -69,4 +73,84 @@ body
     bottom: 0;
     background: linear-gradient(to top, rgb(77, 75, 75), rgb(0, 0, 0));
     z-index: 20;
+}
+.tree
+{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    height: 400px;
+    width: 200px;
+    /* background-color: aqua; */
+    z-index: 30;
+}
+.trunk
+{
+    position: absolute;
+    background: linear-gradient(to right, rgb(73, 66, 4), rgb(137, 161, 1));
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 100px;
+    z-index: 30;
+}
+.branch
+{
+    position: absolute;
+    --branchNo: 0;
+    bottom: calc(50px + 50px * var(--branchNo));
+    left: 50%;
+    width: calc(50% - 5% * var(--branchNo));
+    height: 50px;
+    transform: skew(20deg);
+    background: rgb(13, 199, 13);
+    z-index: 31;
+}
+.branch::before
+{
+    content: '';
+    position: absolute;
+    --branchNo: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    transform: translateX(-100%) skew(-40deg);
+    background: linear-gradient(to right, rgb(2, 90, 2), rgb(13, 199, 13));
+}
+.branch::after
+{
+    content: '';
+    position: absolute;
+    --branchNo: 0;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 50px;
+    transform: translateX(-50%) skew(-40deg);
+    background: linear-gradient(to right, rgb(8, 160, 8), rgb(13, 199, 13));
+}
+.treeStar
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-100%);
+    background: yellow;
+    width: 50px;
+    height: 50px;
+    transform: skew(45deg);
+}
+.treeStar
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-100%);
+    background: yellow;
+    width: 50px;
+    height: 50px;
+    transform: skew(45deg);
 }
